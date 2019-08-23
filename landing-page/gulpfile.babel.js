@@ -89,7 +89,7 @@ gulp.task('b-img', () => {
       .pipe(livereload())
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', () => {e
   gulp.watch('src/*.html', ['b-html']);
   gulp.watch('src/styles', ['b-css']);
   gulp.watch(PATH.jsSRC.concat('**/*.js'), ['b-js']);
