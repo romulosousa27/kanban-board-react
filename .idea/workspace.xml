@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f7b8689-1a93-431c-b4d9-8a31da7b6846" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/romulo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/romulo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing-page/gulpfile.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/gulpfile.babel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +39,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fullstack-development" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,6 +75,9 @@
       <workItem from="1564079653026" duration="747000" />
       <workItem from="1565194597420" duration="6174000" />
       <workItem from="1565208849934" duration="452000" />
+      <workItem from="1565266042871" duration="328000" />
+      <workItem from="1565266533963" duration="972000" />
+      <workItem from="1565267611780" duration="612000" />
     </task>
     <servers />
   </component>
