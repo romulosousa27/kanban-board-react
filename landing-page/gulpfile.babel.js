@@ -91,7 +91,7 @@ gulp.task('b-img', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/*.html', ['b-html']);
-  gulp.watch('src/styles', ['b-css']);
+  gulp.watch('src/styles/**', ['b-css']);
   gulp.watch(PATH.jsSRC.concat('**/*.js'), ['b-js']);
   gulp.watch(PATH.imgSRC.concat('**/*.+(png|jpg|jpeg|gif|svg'), ['b-images'])
 });
