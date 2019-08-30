@@ -4,8 +4,10 @@
       <w>imagemin</w>
       <w>livereload</w>
       <w>lsrc</w>
+      <w>navbar</w>
       <w>nodemon</w>
       <w>plumbler</w>
+      <w>tilst</w>
       <w>webfonts</w>
     </words>
   </dictionary>

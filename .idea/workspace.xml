@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f7b8689-1a93-431c-b4d9-8a31da7b6846" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/romulo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/romulo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing-page/gulpfile.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/gulpfile.babel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-page/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/src/styles/app.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +42,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fullstack-development" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,7 +51,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -78,6 +81,8 @@
       <workItem from="1565266042871" duration="328000" />
       <workItem from="1565266533963" duration="972000" />
       <workItem from="1565267611780" duration="612000" />
+      <workItem from="1567197525633" duration="6000" />
+      <workItem from="1567197552759" duration="243000" />
     </task>
     <servers />
   </component>
