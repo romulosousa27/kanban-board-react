@@ -5,62 +5,74 @@
     <title>Landing Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="src/styles/style.css">
-
+    <!-- Fonts Google Open Sans -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS (3.3.7) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <!-- IONIC ICONS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css" rel="stylesheet">
+    <!-- local CSS -->
+    <link rel="stylesheet" href="src/styles/app.scss">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top affix-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="nav">
-                    <span class="sr-only">Toggle</span> Menu
-                </button>
-                <a href="" class="navbar-brand">
-                    <img src="src/images/tilst.png" class="img-responsive" alt="Tilst">
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" id="nav">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">About</a>
-                    </li>
-                    <li>
-                        <a href="">Features</a>
-                    </li>
-                    <li>
-                        <a href="">Contact</a>
-                    </li>
-                </ul>
-            </div>
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top affix-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="nav">
+                <span class="sr-only">Toggle</span> Menu
+            </button>
+            <a href="" class="navbar-brand">
+                <img src="src/images/tilst.png" class="img-responsive" alt="Tilst">
+            </a>
         </div>
-    </nav>
-    <!-- Navbar / -->
-    
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-12">
-                    <h1>Kanban Board Like Trello</h1>
-                    <h2>By Rômulo Sousa</h2>
-                    <a href="" class="btn btn-primary">Acess Now</a>
-                </div>
-            </div>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Features</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
         </div>
-    </header>
-    <!-- Header / -->
+    </div>
+</nav>
+<!-- Navbar / -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="src/js/app.js"></script>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-xs-12 col-md-12">
+                <h1>Kanban Board Like Trello</h1>
+                <h2>By Rômulo Sousa</h2>
+                <a href="" class="btn btn-primary btn-lg btn-header-custom"><i class="far fa-paper-plane"></i>Access Now</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header / -->
+
+<section class="svg">
+
+</section>
+
+
+
+<!-- Jquery (3.2.1) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap JS (3.3.7) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Local Js -->
+<script src="src/js/app.js"></script>
 </body>
 
 </html>
