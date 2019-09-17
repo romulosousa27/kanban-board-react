@@ -2,56 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f7b8689-1a93-431c-b4d9-8a31da7b6846" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/romulo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/romulo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/gulpfile.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/gulpfile.babel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/.bin/gulp" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/node_modules/.bin/gulp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/.bin/gulp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/bin/gulp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/completion/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/completion/bash" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/completion/fish" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/completion/powershell" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/completion/zsh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/gulp.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/ansi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/cli-options.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/completion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/config/cli-flags.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/config/env-flags.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/config/load-files.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/exit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/get-blacklist.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/blacklist-error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/copy-tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/tasks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/to-console.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/verify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/make-title.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/register-exports.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/tildify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/shared/verify-dependencies.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/format-error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/log/events.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/log/tasks-simple.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/task-tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0-alpha.1/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0-alpha.2/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/format-error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/events.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/get-task.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/sync-task.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/tasks-simple.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/node_modules/gulp-cli/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/node_modules/gulp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/node_modules/gulp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-page/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/landing-page/src/styles/app.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +80,7 @@
       <workItem from="1567197525633" duration="6000" />
       <workItem from="1567197552759" duration="634000" />
       <workItem from="1567198572196" duration="4000" />
-      <workItem from="1567198606947" duration="2480000" />
+      <workItem from="1567198606947" duration="2761000" />
     </task>
     <servers />
   </component>
