@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Tilist from './../images/tilst.png';
+
 export default class Home extends Component {
   constructor(props){
     super(props)
@@ -8,7 +10,25 @@ export default class Home extends Component {
   render(){
     return (
         <div>
-          <h1>Kanban Board React.js</h1>
+          <nav className="navbar navbar-default navbar-fixed-top">
+            <div className="container-fluid">
+              <div className="navbar-header">
+                <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar">
+                  <span className="icon-bar"> </span>
+                  <span className="icon-bar"> </span>
+                  <span className="icon-bar"> </span>
+                  <a href="" className="navbar-brand">
+                    <img src={ Tilist } className="img-responsive" alt=""/>
+                  </a>
+                </button>
+              </div>
+              <div className="navbar-collapse collapse" id="navbar">
+                <ul className="nav navbar-nav">
+
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
     );
   }
