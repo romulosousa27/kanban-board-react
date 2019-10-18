@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Card from './Card';
 
 export default class Panel extends Component {
   constructor(props){
@@ -14,7 +15,9 @@ export default class Panel extends Component {
               <h2>My Panel</h2>
             </div>
             <div className="panel-body">
-              Body
+              <ul>
+                <Card/>
+              </ul>
             </div>
             <div className="panel-footer">
               <button className="btn btn-primary">

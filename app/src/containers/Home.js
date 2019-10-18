@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Tilist from './../images/tilst.png';
 import './Home.scss';
 import Panel from "../components/Panel";
+import Card from "../components/Card";
 
 export default class Home extends Component {
   constructor(props){
@@ -11,7 +12,9 @@ export default class Home extends Component {
   render(){
     return (
         <div>
-          <Panel />
+          <Panel>
+            <Card />
+          </Panel>
         </div>
     );
   }
