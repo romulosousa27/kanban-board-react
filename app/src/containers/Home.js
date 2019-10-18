@@ -5,17 +5,17 @@ import Panel from "../components/Panel";
 import Card from "../components/Card";
 
 export default class Home extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
   }
 
-  render(){
+  render() {
     return (
-        <div>
-          <Panel>
-            <Card />
-          </Panel>
-        </div>
+      <div>
+        <Panel>
+          <Card />
+        </Panel>
+      </div>
     );
   }
 }
