@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import Card from './Card';
 
 export default class Cards extends Component {
-  constructor(props) {
+  constructor(props){
     super(props)
   }
 
-  render() {
+  render(){
+    const cards = this.props.cards.map(card => (
+        <Card key={ card.id }/>
+    ));
+
     return (
-      <div>
-        <Card />
-        <Card />
-        <Card />
-      </div>
+        <div>
+          { cards }
+        </div>
     );
   }
 }
