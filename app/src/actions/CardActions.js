@@ -1,12 +1,16 @@
-import * as ActionsTypes from '../constants/ActionsTypes';
-import uuid from 'uuid';
+import * as ActionsTypes from './../constants/ActionsTypes';
+import uuid from 'uuid/v4';
 
-// criação de um novo card
+/**
+ * Criação de uma Nova Tarefa(Card)
+ * @param value
+ * @returns {{payload: {edit: boolean, id: *, text: *}, type: *}}
+ */
 const createCard = (value) => {
   return {
     type: ActionsTypes.CREATE_CARD,
     payload: {
-      id: uuid.v4(),
+      id: uuid(),
       edit: false,
       text: value
     }

@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Cards from './Cards';
 
 import { connect } from 'react-redux';
-import CardActions from '../actions/CardActions';
+import CardActions from './../actions/CardActions';
 
 class Panel extends Component {
   static propTypes = {
-    createCard: PropTypes.func.isRequired
+    createCard: PropTypes.func.isRequired,
   };
 
   constructor(props){
@@ -21,7 +21,7 @@ class Panel extends Component {
 
   render(){
     const {cards} = this.props;
-
+    console.log('PANEL: '+cards);
     return (
         <div className="col-md-3">
           <div className="panel panel-default">
@@ -30,7 +30,7 @@ class Panel extends Component {
             </div>
             <div className="panel-body">
               <Cards
-                cards={cards}
+                // cards={cards}
               />
             </div>
             <div className="panel-footer">
