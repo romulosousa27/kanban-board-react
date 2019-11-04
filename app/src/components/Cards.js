@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import EditCard from "./EditCard";
 
 export default class Cards extends Component {
   constructor(props){
@@ -8,7 +9,9 @@ export default class Cards extends Component {
 
   render(){
     const cards = this.props.cards.map(card => (
-        <Card key={card.id}/>
+        <Card key={card.id}>
+          <EditCard id={card.id} edit={card.edit} text={card.text}/>
+        </Card>
     ));
     return (
         <ul>
