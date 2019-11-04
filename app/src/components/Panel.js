@@ -21,7 +21,6 @@ class Panel extends Component {
 
   render(){
     const {cards} = this.props;
-    console.log('PANEL: '+cards);
     return (
         <div className="col-md-3">
           <div className="panel panel-default">
@@ -30,7 +29,7 @@ class Panel extends Component {
             </div>
             <div className="panel-body">
               <Cards
-                // cards={cards}
+                  cards={ cards }
               />
             </div>
             <div className="panel-footer">
