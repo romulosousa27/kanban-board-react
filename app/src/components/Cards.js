@@ -7,13 +7,12 @@ export default class Cards extends Component {
   }
 
   render(){
-    // const cards = this.props.cards.map(card => (
-    //     <Card key={card.id}/>
-    // ));
+    const cards = this.props.cards.map(card => (
+        <Card key={card.id}/>
+    ));
     return (
         <ul>
-          {/*{ cards }*/}
-          <Card />
+          { cards }
         </ul>
     );
   }
