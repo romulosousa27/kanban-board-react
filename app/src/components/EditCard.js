@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 export default class EditCard extends Component {
   constructor(props){
-    super(props)
+    super(props);
 
-    this.handleToEdit = this.handleToEdit.bind(this)
+    this.handleToEdit = this.handleToEdit.bind(this);
+    this.handleEditCard = this.handleEditCard.bind(this);
   }
 
   // Editando o Componente de Card
@@ -13,10 +14,23 @@ export default class EditCard extends Component {
     this.props.ToEdit(id);
   }
 
+  handleEditCard(e){
+    if(e.type === 'keypress' && e.key !== 'enter'){
+      return
+    }
+
+    const text = e.target.value;
+    const id = this.props;
+
+    if(text.trim().length){
+      this.props.editCard(id, text)
+    }
+  }
+
   renderEdit(){
     return (
         <div>
-          <input type="text" className="form-control" defaultValue={ this.props.text } />
+          <input type="text" className="form-control" defaultValue={ this.props.text } onBlur={this.handleEditCard } onKeyPress={this.handleEditCard }/>
         </div>
     )
   }
@@ -26,7 +40,8 @@ export default class EditCard extends Component {
     return (
         <div>
           <div className="col-xs-10">
-            <input type="text" className="form-control" defaultValue={ this.props.text } onClick={this.handleToEdit} readOnly/>
+            <input type="text" className="form-control" defaultValue={ this.props.text } onClick={ this.handleToEdit }
+                   readOnly/>
           </div>
         </div>
     )
