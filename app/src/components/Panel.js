@@ -4,6 +4,7 @@ import Cards from './Cards';
 
 import { connect } from 'react-redux';
 import CardActions from './../actions/CardActions';
+import EditCard from "./EditCard";
 
 class Panel extends Component {
   static propTypes = {
@@ -32,6 +33,7 @@ class Panel extends Component {
                   cards={ cards }
                   ToEdit={ this.props.editCard }
                   editCard={ this.props.editCard }
+                  deleteCard={this.props.deleteCard}
               />
             </div>
             <div className="panel-footer">
@@ -64,9 +66,11 @@ const mapDispatchToProps = (dispatch) => {
         edited.edit = false;
         edited.text = value;
       }
-      console.log(edited.text);
+
       dispatch(CardActions.editCard(edited))
     },
+
+    deleteCard : (id) => dispatch(CardActions.deleteCard(id))
   }
 };
 
