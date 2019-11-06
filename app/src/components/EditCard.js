@@ -6,6 +6,7 @@ export default class EditCard extends Component {
 
     this.handleToEdit = this.handleToEdit.bind(this);
     this.handleEditCard = this.handleEditCard.bind(this);
+    this.handleDeleteCard = this.handleDeleteCard.bind(this);
   }
 
   // Editando o Componente de Card
@@ -14,24 +15,33 @@ export default class EditCard extends Component {
     this.props.ToEdit(id);
   }
 
+  // Editando o Conteudo de dentro do Card
   handleEditCard(e){
-    if(e.type === 'keypress' && e.key !== 'enter'){
+    if(e.type==='keypress'&&e.key!=='Enter') {
       return
     }
 
     const text = e.target.value;
     const id = this.props;
 
-    if(text.trim().length){
+    if(text.trim().length) {
       this.props.editCard(id, text)
     }
   }
 
+  // Deletando um Card
+  handleDeleteCard(){
+    const {id} = this.props;
+    this.props.deleteCard(id);
+  }
+
   renderEdit(){
     return (
-        <div>
-          <input type="text" className="form-control" defaultValue={ this.props.text } onBlur={this.handleEditCard } onKeyPress={this.handleEditCard }/>
-        </div>
+        <input type="text" className="form-control"
+               defaultValue={ this.props.text }
+               onBlur={ this.handleEditCard }
+               onKeyPress={ this.handleEditCard }
+        />
     )
   }
 
@@ -43,6 +53,9 @@ export default class EditCard extends Component {
             <input type="text" className="form-control" defaultValue={ this.props.text } onClick={ this.handleToEdit }
                    readOnly/>
           </div>
+          <button className="col-xs-2" onClick={ this.handleDeleteCard }>
+            <i className="ion-trash-b"></i>
+          </button>
         </div>
     )
   }
