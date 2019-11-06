@@ -17,6 +17,19 @@ const createCard = (value) => {
   }
 };
 
+/**
+ * Editando um a Tarefa
+ * @param edited
+ * @returns {{payload: *, type: *}}
+ */
+const editCard = (edited) => {
+  return {
+    type: ActionsTypes.EDIT_CARD,
+    payload: edited
+  }
+};
+
 export default {
-  createCard
+  createCard,
+  editCard,
 }
