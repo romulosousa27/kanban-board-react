@@ -30,6 +30,7 @@ class Panel extends Component {
             <div className="panel-body">
               <Cards
                   cards={ cards }
+                  ToEdit={ this.props.editCard }
               />
             </div>
             <div className="panel-footer">
@@ -51,7 +52,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createCard: () => dispatch(CardActions.createCard())
+    createCard: () => dispatch(CardActions.createCard('New Task Creted')),
+
+    editCard: (id) => {
+      const edited = {id, edit:true};
+      dispatch(CardActions.editCard(edited))
+    },
   }
 };
 
