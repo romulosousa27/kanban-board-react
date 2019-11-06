@@ -15,6 +15,7 @@ export default class Cards extends Component {
               edit={ card.edit }
               text={ card.text }
               ToEdit={this.props.ToEdit}
+              editCard={this.props.editCard}
           />
         </Card>
     ));
