@@ -4,7 +4,6 @@ import Cards from './Cards';
 
 import { connect } from 'react-redux';
 import CardActions from './../actions/CardActions';
-import EditCard from "./EditCard";
 
 class Panel extends Component {
   static propTypes = {
