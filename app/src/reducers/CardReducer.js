@@ -1,5 +1,10 @@
 import * as ActionsTypes from './../constants/ActionsTypes';
 
+/**
+ *
+ * @param state
+ * @param action
+ */
 export default function cards(state = [], action){
   switch(action.type) {
     case ActionsTypes.CREATE_CARD:
