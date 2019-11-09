@@ -23,10 +23,10 @@ class Panel extends Component {
     const {cards} = this.props;
     return (
         <div className="col-md-3">
-          {/*<div className="panel panel-default">*/}
-          {/*  <div className="panel-heading">*/}
-          {/*    <h2>My Panel</h2>*/}
-          {/*  </div>*/}
+          <div className="panel panel-default">
+            <div className="panel-heading">
+              <h2>My Panel</h2>
+            </div>
             <div className="panel-body">
               <Cards
                   cards={ cards }
@@ -35,12 +35,12 @@ class Panel extends Component {
                   deleteCard={this.props.deleteCard}
               />
             </div>
-          {/*  <div className="panel-footer">*/}
-          {/*    <button className="btn btn-primary" onClick={ this.handleCreateCard }>*/}
-          {/*      <i className="ion-plus-round"></i> Card*/}
-          {/*    </button>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
+            <div className="panel-footer">
+              <button className="btn btn-primary" onClick={ this.handleCreateCard }>
+                <i className="ion-plus-round"></i> Card
+              </button>
+            </div>
+          </div>
         </div>
     );
   }
