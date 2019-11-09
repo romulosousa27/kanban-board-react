@@ -16,7 +16,8 @@ class Panel extends Component {
   }
 
   handleCreateCard(){
-    this.props.createCard()
+    this.props.createCard();
+    console.log('criar panel');
   }
 
   render(){

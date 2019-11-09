@@ -12,9 +12,7 @@ class Home extends Component {
     this.handleCreatePanel = this.handleCreatePanel.bind(this);
   }
 
-  /**
-   * Criaçao de um novo Painel
-   */
+  // Criação de um Painel
   handleCreatePanel(){
     this.props.createPanel();
   }
@@ -26,10 +24,12 @@ class Home extends Component {
         <div>
           <div className="col-xs-12">
             <button className="btn btn-primary" onClick={ this.handleCreatePanel }>
-              <i className="ion-plus-round"></i>New Panel
+              <i className="ion-plus-round"></i> New Panel
             </button>
           </div>
+
           <Panels panels={ panels }/>
+
         </div>
     );
   }

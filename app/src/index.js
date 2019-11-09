@@ -28,9 +28,7 @@ ReactDOM.render(
             </button>
           </div>
           <div className="navbar-collapse collapse" id="navbar">
-            <ul className="nav navbar-nav">
-
-            </ul>
+            <ul className="nav navbar-nav"></ul>
           </div>
         </div>
       </nav>
