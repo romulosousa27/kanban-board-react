@@ -7,7 +7,7 @@ import Panels from './../components/Panel';
 
 class Home extends Component {
   constructor(props){
-    super(props)
+    super(props);
 
     this.handleCreatePanel = this.handleCreatePanel.bind(this);
   }
