@@ -11,12 +11,20 @@ const createPanel = (value) => {
     type: ActionsTypes.CREATE_PANEL,
     payload: {
       id: uuid(),
-      name: value,
+      text: value,
       cards: []
     }
   }
 };
 
+const editPanel = (edited) => {
+  return {
+    type: ActionsTypes.EDIT_PANEL,
+    payload: edited
+  }
+};
+
 export default {
   createPanel,
+  editPanel,
 }
