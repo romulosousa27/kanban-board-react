@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 export default class EditCard extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.handleToEdit = this.handleToEdit.bind(this);
@@ -10,58 +10,58 @@ export default class EditCard extends Component {
   }
 
   // Editando o Componente de Card
-  handleToEdit(){
-    const {id} = this.props;
+  handleToEdit() {
+    const { id } = this.props;
     this.props.ToEdit(id);
   }
 
   // Editando o Conteudo de dentro do Card
-  handleEditCard(e){
-    if(e.type==='keypress'&&e.key!=='Enter') {
+  handleEditCard(e) {
+    if (e.type === 'keypress' && e.key !== 'Enter') {
       return
     }
 
     const text = e.target.value;
     const id = this.props;
 
-    if(text.trim().length) {
-      this.props.editCard(id, text)
+    if (text.trim().length) {
+      this.props.editComponent(id, text)
     }
   }
 
   // Deletando um Card
-  handleDeleteCard(){
-    const {id} = this.props;
+  handleDeleteCard() {
+    const { id } = this.props;
     this.props.deleteCard(id);
   }
 
-  renderEdit(){
+  renderEdit() {
     return (
-        <input type="text" className="form-control"
-               defaultValue={ this.props.text }
-               onBlur={ this.handleEditCard }
-               onKeyPress={ this.handleEditCard }
-        />
+      <input type="text" className="form-control"
+        defaultValue={this.props.text}
+        onBlur={this.handleEditCard}
+        onKeyPress={this.handleEditCard}
+      />
     )
   }
 
   // Carrega o texto da Card.
-  renderText(){
+  renderText() {
     return (
-        <div>
-          <div className="col-xs-10">
-            <input type="text" className="form-control" defaultValue={ this.props.text } onClick={ this.handleToEdit }
-                   readOnly/>
-          </div>
-          <button className="col-xs-2" onClick={ this.handleDeleteCard }>
-            <i className="ion-trash-b"></i>
-          </button>
+      <div>
+        <div className="col-xs-10">
+          <input type="text" className="form-control" defaultValue={this.props.text} onClick={this.handleToEdit}
+            readOnly />
         </div>
+        <button className="col-xs-2" onClick={this.handleDeleteCard}>
+          <i className="ion-trash-b"></i>
+        </button>
+      </div>
     )
   }
 
-  render(){
-    if(this.props.edit) {
+  render() {
+    if (this.props.edit) {
       return this.renderEdit()
     }
     return this.renderText()
