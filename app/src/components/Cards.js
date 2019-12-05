@@ -3,6 +3,7 @@ import Card from './Card';
 import EditCard from "./EditCard";
 
 export default class Cards extends Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor(props){
     super(props)
   }
@@ -15,8 +16,8 @@ export default class Cards extends Component {
               edit={ card.edit }
               text={ card.text }
               ToEdit={this.props.ToEdit}
-              editCard={this.props.editCard}
-              deleteCard={this.props.deleteCard}
+              editComponent={this.props.editComponent}
+              deleteComponent={this.props.deleteComponent}
           />
         </Card>
     ));
