@@ -4,45 +4,53 @@ import Cards from './Cards';
 
 import { connect } from 'react-redux';
 import CardActions from './../actions/CardActions';
+import Edit from './EditCard';
 
 class Panel extends Component {
   static propTypes = {
     createCard: PropTypes.func.isRequired,
   };
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.handleCreateCard = this.handleCreateCard.bind(this);
   }
 
-  handleCreateCard(){
+  /** Criação de um novo componente Card */
+  handleCreateCard() {
     this.props.createCard();
-    console.log('criar panel');
   }
 
-  render(){
-    const {cards} = this.props;
+  render() {
+    const { cards, panel } = this.props;
     return (
-        <div className="col-md-3">
-          <div className="panel panel-default">
-            <div className="panel-heading">
-              <h2>My Panel</h2>
-            </div>
-            <div className="panel-body">
-              <Cards
-                  cards={ cards }
-                  ToEdit={ this.props.editCard }
-                  editCard={ this.props.editCard }
-                  deleteCard={this.props.deleteCard}
-              />
-            </div>
-            <div className="panel-footer">
-              <button className="btn btn-primary" onClick={ this.handleCreateCard }>
-                <i className="ion-plus-round"></i> Card
+      <div className="col-md-3">
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <Edit
+              id={panel.id}
+              edit={panel.edit}
+              text={panel.text}
+              ToEdit={this.props.editPanel}
+              editComponent={this.props.editPanel}
+
+            />
+          </div>
+          <div className="panel-body">
+            <Cards
+              cards={cards}
+              ToEdit={this.props.editCard}
+              editCard={this.props.editCard}
+              deleteCard={this.props.deleteCard}
+            />
+          </div>
+          <div className="panel-footer">
+            <button className="btn btn-primary" onClick={this.handleCreateCard}>
+              <i className="ion-plus-round"></i> Card
               </button>
-            </div>
           </div>
         </div>
+      </div>
     );
   }
 }
@@ -58,9 +66,9 @@ const mapDispatchToProps = (dispatch) => {
     createCard: () => dispatch(CardActions.createCard('New Task Creted')),
 
     editCard: (id, value) => {
-      const edited = {id};
+      const edited = { id };
 
-      if(!value) {
+      if (!value) {
         edited.edit = true;
       } else {
         edited.edit = false;
@@ -70,7 +78,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(CardActions.editCard(edited))
     },
 
-    deleteCard : (id) => dispatch(CardActions.deleteCard(id))
+    deleteCard: (id) => dispatch(CardActions.deleteCard(id))
   }
 };
 
