@@ -3,34 +3,37 @@ import { connect } from 'react-redux';
 import PanelActions from './../actions/PanelActions';
 
 import './Home.scss';
-import Panels from './../components/Panel';
+import Panels from './../components/Panels';
 
 class Home extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.handleCreatePanel = this.handleCreatePanel.bind(this);
   }
 
-  // Criação de um Painel
-  handleCreatePanel(){
+  /** Criando um novo Painel */
+  handleCreatePanel() {
     this.props.createPanel();
   }
 
-  render(){
-    const {panels} = this.props;
+  render() {
+    const { panels } = this.props;
 
     return (
-        <div>
-          <div className="col-xs-12">
-            <button className="btn btn-primary" onClick={ this.handleCreatePanel }>
-              <i className="ion-plus-round"></i> New Panel
+      <div>
+        <div className="col-xs-12">
+          <button className="btn btn-primary" onClick={this.handleCreatePanel}>
+            <i className="ion-plus-round"></i> New Panel
             </button>
-          </div>
-
-          <Panels panels={ panels }/>
-
         </div>
+
+        <Panels
+          panels={panels}
+          editPanel={this.props.editPanel}
+        />
+
+      </div>
     );
   }
 }
@@ -44,6 +47,18 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     createPanel: () => dispatch(PanelActions.createPanel('New Panel')),
+    editPanel: (id, value) => {
+      const edited = {id};
+
+      if(!value){
+        edited.edit = true;
+      } else{
+        edited.edit = false;
+        edited.text = value;
+      }
+
+      dispatch(PanelActions.editPanel(edited));
+    }
   }
 };
 
