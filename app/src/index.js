@@ -7,7 +7,7 @@ import configureStore, { history } from './store';
 import './index.scss';
 import Home from './containers/Home'
 
-import cfg from './store';
+// import cfg from './store';
 import Tilist from "./images/tilst.png";
 
 const store = configureStore();
