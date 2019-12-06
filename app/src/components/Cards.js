@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import EditCard from "./EditCard";
+import Edit from './Edit';
 
 export default class Cards extends Component {
   // eslint-disable-next-line no-useless-constructor
@@ -11,13 +11,13 @@ export default class Cards extends Component {
   render(){
     const cards = this.props.cards.map(card => (
         <Card key={ card.id }>
-          <EditCard
+          <Edit
               id={ card.id }
               edit={ card.edit }
               text={ card.text }
               ToEdit={this.props.ToEdit}
-              editComponent={this.props.editComponent}
-              deleteComponent={this.props.deleteComponent}
+              editCard={this.props.editComponent}
+              deleteCard={this.props.deleteComponent}
           />
         </Card>
     ));
