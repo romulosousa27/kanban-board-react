@@ -53,7 +53,7 @@ class Panel extends Component {
                   text={ panel.text }
                   ToEdit={ this.props.editPanel }
                   editComponent={ this.props.editPanel }
-                  deleteComponet={ this.handleDeletePanel }
+                  deleteComponent={ this.props.deletePanel }
 
               />
             </div>
@@ -62,8 +62,8 @@ class Panel extends Component {
                   cards={ cards }
                   ToEdit={ this.props.editCard }
                   editCard={ this.props.editCard }
-                  deleteCard={ this.handleDeleteCard }
-                  modeCard={this.props.moveCard}
+                  deleteCard={ this.props.deleteCard }
+                  modeCard={ this.props.moveCard }
               />
             </div>
             <div className="panel-footer">
@@ -101,8 +101,8 @@ const mapDispatchToProps = (dispatch) => {
     },
 
     deleteCard: (panelID, cardID) => {
-      dispatch(CardActions.deleteCard(cardID))
-      if(!panelID){
+      dispatch(CardActions.deleteCard(cardID));
+      if(!panelID) {
         return
       }
       return dispatch(PanelActions.removeFromPanel(panelID, cardID));

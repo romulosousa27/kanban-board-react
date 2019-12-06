@@ -5,7 +5,7 @@ export default class EditComponent extends Component {
     super(props);
 
     this.handleToEdit = this.handleToEdit.bind(this);
-    this.handleEdit = this.handleEdit.bind(this);
+    this.handleEdit   = this.handleEdit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
 

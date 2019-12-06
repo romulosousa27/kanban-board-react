@@ -37,9 +37,7 @@ const editPanel = (edited) => {
 const deletePanel = (id) => {
   return {
     type: ActionsTypes.DELETE_PANEL,
-    payload: {
-      id,
-    }
+    payload: {id}
   }
 };
 
