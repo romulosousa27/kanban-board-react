@@ -4,11 +4,13 @@ import PanelActions from './../actions/PanelActions';
 
 import './Home.scss';
 import Panels from './../components/Panels';
+// import HTML5Backend from "react-dnd-html5-backend/lib/HTML5Backend";
 
 class Home extends Component {
   constructor(props) {
     super(props);
 
+    /** Bind dos metodos  */
     this.handleCreatePanel = this.handleCreatePanel.bind(this);
   }
 
@@ -31,6 +33,8 @@ class Home extends Component {
         <Panels
           panels={panels}
           editPanel={this.props.editPanel}
+          deletePanel={this.props.deletePanel}
+          movePanel={this.props.movePanel}
         />
 
       </div>
@@ -46,7 +50,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createPanel: () => dispatch(PanelActions.createPanel('New Panel')),
+    createPanel: () => dispatch(PanelActions.createPanel('New Panel Created')),
     editPanel: (id, value) => {
       const edited = {id};
 
@@ -58,7 +62,9 @@ const mapDispatchToProps = (dispatch) => {
       }
 
       dispatch(PanelActions.editPanel(edited));
-    }
+    },
+    deletePanel: (id) => dispatch(PanelActions.deletePanel(id)),
+    movePanel: (id, monitorID) => dispatch(PanelActions.movePanel(id, monitorID)),
   }
 };
 
