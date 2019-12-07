@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PanelActions from './../actions/PanelActions';
-
+import HTML5Backend from 'react-dnd-html5-backend'
+import { DndProvider } from 'react-dnd'
 import './Home.scss';
 import Panels from './../components/Panels';
-// import HTML5Backend from "react-dnd-html5-backend/lib/HTML5Backend";
 
 class Home extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
 
     /** Bind dos metodos  */
@@ -15,29 +15,28 @@ class Home extends Component {
   }
 
   /** Criando um novo Painel */
-  handleCreatePanel() {
+  handleCreatePanel(){
     this.props.createPanel();
   }
 
-  render() {
-    const { panels } = this.props;
+  render(){
+    const {panels} = this.props;
 
     return (
-      <div>
-        <div className="col-xs-12">
-          <button className="btn btn-primary" onClick={this.handleCreatePanel}>
-            <i className="ion-plus-round"></i> New Panel
+        <DndProvider backend={HTML5Backend}>
+          <div className="col-xs-12">
+            <button className="btn btn-primary" onClick={ this.handleCreatePanel }>
+              <i className="ion-plus-round"></i> New Panel
             </button>
-        </div>
+          </div>
 
-        <Panels
-          panels={panels}
-          editPanel={this.props.editPanel}
-          deletePanel={this.props.deletePanel}
-          movePanel={this.props.movePanel}
-        />
-
-      </div>
+          <Panels
+              panels={ panels }
+              editPanel={ this.props.editPanel }
+              deletePanel={ this.props.deletePanel }
+              movePanel={ this.props.movePanel }
+          />
+        </DndProvider>
     );
   }
 }
@@ -54,9 +53,9 @@ const mapDispatchToProps = (dispatch) => {
     editPanel: (id, value) => {
       const edited = {id};
 
-      if(!value){
+      if(!value) {
         edited.edit = true;
-      } else{
+      } else {
         edited.edit = false;
         edited.text = value;
       }
@@ -64,7 +63,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(PanelActions.editPanel(edited));
     },
     deletePanel: (id) => dispatch(PanelActions.deletePanel(id)),
-    movePanel: (id, monitorID) => dispatch(PanelActions.movePanel(id, monitorID)),
+    movePanel: (id, monitor_id) => dispatch(PanelActions.movePanel(id, monitor_id)),
   }
 };
 
