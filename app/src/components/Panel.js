@@ -63,7 +63,7 @@ class Panel extends Component {
                   ToEdit={ this.props.editCard }
                   editCard={ this.props.editCard }
                   deleteCard={ this.props.deleteCard }
-                  modeCard={ this.props.moveCard }
+                  moveCard={ this.props.moveCard }
               />
             </div>
             <div className="panel-footer">

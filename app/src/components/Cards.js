@@ -15,9 +15,9 @@ export default class Cards extends Component {
               id={ card.id }
               edit={ card.edit }
               text={ card.text }
-              ToEdit={this.props.editCard}
-              editCard={this.props.editCard}
-              deleteCard={this.props.deleteCard}
+              ToEdit={ this.props.editCard }
+              editComponent={ this.props.editCard }
+              deleteComponent={ this.props.deleteCard }
           />
         </Card>
     ));
