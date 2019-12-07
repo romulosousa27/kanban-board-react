@@ -44,14 +44,14 @@ const deletePanel = (id) => {
 /**
  *
  * @param id
- * @param monitorID
+ * @param monitor_id
  * @returns {{payload: {monitorID: *, id: *}, type: *}}
  */
-const movePanel = (id, monitorID) => {
+const movePanel = (id, monitor_id) => {
   return {
     type: ActionsTypes.MOVE_PANEL,
     payload: {
-      id, monitorID
+      id, monitor_id
     }
   }
 };
