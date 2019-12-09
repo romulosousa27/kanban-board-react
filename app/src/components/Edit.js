@@ -50,15 +50,15 @@ export default class EditComponent extends Component {
   // Carrega o texto da Card.
   renderText(){
     return (
-        <div>
-          <div className="col-xs-10">
+        <div className="row">
+          <div className="col-xs-10 no-padding">
             <input type="text" className="form-control"
                    defaultValue={ this.props.text }
                    onClick={ this.handleToEdit }
                    readOnly
             />
           </div>
-          <button className="col-xs-2" onClick={ this.handleDelete }>
+          <button className="btn btn-danger btn-delete col-xs-2" onClick={ this.handleDelete }>
             <i className="ion-trash-b"></i>
           </button>
         </div>
