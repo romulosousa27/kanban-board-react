@@ -113,6 +113,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     movePanel: (id, monitorID) => dispatch(PanelActions.movePanel(id, monitorID)),
     insertInPanel: (id, monitorID) => dispatch(PanelActions.insertInPanel(id, monitorID)),
+    moveCard: (id, monitor_id) => dispatch(PanelActions.moveCard(id, monitor_id)),
   }
 };
 
