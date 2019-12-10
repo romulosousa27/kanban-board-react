@@ -73,25 +73,25 @@ const moveCard = (id, monitor_id) => {
 
 /**
  *
- * @param panelID
- * @param cardID
- * @returns {{payload: {panelID: *, cardID: *}, type: *}}
+ * @param panel_id
+ * @param card_id
+ * @returns {{payload: {panel_id: *, card_id: *}, type: *}}
  */
-const insertInPanel = (panelID, cardID) => {
+const insertInPanel = (panel_id, card_id) => {
   return {
     type: ActionsTypes.INSERT_IN_PANEL,
     payload: {
-      panelID, cardID,
+      panel_id, card_id,
     }
   }
 };
 
 
-const removeFromPanel = (panelID, cardID) => {
+const removeFromPanel = (panel_id, card_id) => {
   return {
     type: ActionsTypes.REMOVE_FROM_PANEL,
     payload: {
-      panelID, cardID,
+      panel_id, card_id,
     }
   }
 };

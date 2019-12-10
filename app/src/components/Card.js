@@ -16,13 +16,9 @@ class Card extends Component {
 
   render(){
     const {connectDragSource, connectDropTarget} = this.props;
-    return connectDragSource
-    (
-        connectDropTarget
-        (
-            <li className="col-xs-12">{ this.props.children }</li>
-        )
-    );
+    return connectDragSource(connectDropTarget(
+        <li className="col-xs-12">{ this.props.children }</li>
+    ));
   }
 }
 

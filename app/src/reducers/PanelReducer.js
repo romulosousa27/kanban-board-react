@@ -30,13 +30,13 @@ export default function panels(state = [], action){
       const targetDropId = action.payload.id;
       const monitor_id = action.payload.monitor_id;
 
-      const targetIndex = state.findIndex(panel => panel.id === targetDropId);
-      const monitorIndex = state.findIndex(panel => panel.id === monitor_id);
+      const targetIndex = state.findIndex(panel => panel.id===targetDropId);
+      const monitorIndex = state.findIndex(panel => panel.id===monitor_id);
 
       return update(state, {
         $splice: [
-            [monitorIndex, 1],
-            [targetIndex, 0, state.find(panel => panel.id === monitor_id)]
+          [monitorIndex, 1],
+          [targetIndex, 0, state.find(panel => panel.id===monitor_id)]
         ]
       });
 
@@ -44,8 +44,8 @@ export default function panels(state = [], action){
       const targetCard_id = action.payload.id;
       const monitorCard_id = action.payload.monitor_id;
 
-      let targetPanel = state.filter( panel => panel.cards.indexOf(targetCard_id));
-      let monitorPanel = state.filter( panel => panel.cards.indexOf(monitorCard_id));
+      let targetPanel = state.filter(panel => panel.cards.indexOf(targetCard_id));
+      let monitorPanel = state.filter(panel => panel.cards.indexOf(monitorCard_id));
 
       targetPanel = targetPanel[0];
       monitorPanel = monitorPanel[0];
@@ -53,19 +53,19 @@ export default function panels(state = [], action){
       const targetCardIndex = targetPanel.cards.indexOf(targetCard_id);
       const monitorCardIndex = monitorPanel.card.indexOf(monitorCard_id);
 
-      if(targetPanel.id === monitorPanel.id){
+      if(targetPanel.id===monitorPanel.id) {
         return state.map((panel) => {
           const panel_id = panel.id;
 
-          if(monitorPanel.id !== panel_id){
+          if(monitorPanel.id!==panel_id) {
             return panel;
           }
 
-          return Object.assign({}, panel,  {
+          return Object.assign({}, panel, {
             cards: update(monitorPanel.cards, {
               $splice: [
-                  [monitorCardIndex, 1],
-                  [targetCardIndex, 0, monitorCard_id]
+                [monitorCardIndex, 1],
+                [targetCardIndex, 0, monitorCard_id]
               ]
             })
           });
@@ -76,17 +76,17 @@ export default function panels(state = [], action){
       return state.map((panel) => {
         const panel_id = panel.id;
 
-        if(targetPanel.id === panel_id){
+        if(targetPanel.id===panel_id) {
           return Object.assign({}, panel, {
             cards: update(panels.cards, {
               $splice: [
-                  [targetCardIndex, 0, monitor_id]
+                [targetCardIndex, 0, monitor_id]
               ]
             })
           });
         }
 
-        if(monitorPanel.id === panel_id){
+        if(monitorPanel.id===panel_id) {
           return Object.assign({}, panel, {
             cards: update(panels.cards, {
               $splice: [
@@ -95,8 +95,32 @@ export default function panels(state = [], action){
             })
           });
         }
-
       });
+
+    case ActionsTypes.INSERT_IN_PANEL:
+        const panel_id_insert = action.payload.panel_id;
+        const card_id_insert = action.payload.card_id;
+
+        return state.map((panel) => {
+          const {cards} = panel;
+
+          if(!panel.cards.indexOf(card_id_insert)){
+            return Object.assign({}, panel, {
+              cards: cards.filter((card_id) => {
+                return card_id !== card_id_insert;
+              })
+            })
+          }
+
+          if(panel.id === panel_id_insert){
+            Object.assign({}, panel, {
+              cards: cards.concat(card_id_insert)
+            })
+          }
+
+          return panel;
+
+        });
 
     default:
       return state;
