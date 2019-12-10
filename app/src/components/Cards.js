@@ -10,7 +10,7 @@ export default class Cards extends Component {
 
   render(){
     const cards = this.props.cards.map(card => (
-        <Card key={ card.id }>
+        <Card key={ card.id } moveCard={ this.props.moveCard }>
           <Edit
               id={ card.id }
               edit={ card.edit }
