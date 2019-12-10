@@ -24,7 +24,7 @@ class Home extends Component {
 
     return (
         <DndProvider backend={HTML5Backend}>
-          <div className="col-xs-12">
+          <div className="col-xs-12 spacing">
             <button className="btn btn-primary" onClick={ this.handleCreatePanel }>
               <i className="ion-plus-round"></i> New Panel
             </button>
