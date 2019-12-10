@@ -45,7 +45,7 @@ const deletePanel = (id) => {
  *
  * @param id
  * @param monitor_id
- * @returns {{payload: {monitorID: *, id: *}, type: *}}
+ * @returns {{payload: {monitor_id: *, id: *}, type: *}}
  */
 const movePanel = (id, monitor_id) => {
   return {
@@ -59,14 +59,14 @@ const movePanel = (id, monitor_id) => {
 /**
  *
  * @param id
- * @param monitorID
- * @returns {{payload: {monitorID: *, id: *}, type: *}}
+ * @param monitor_id
+ * @returns {{payload: {monitor_id: *, id: *}, type: *}}
  */
-const moveCard = (id, monitorID) => {
+const moveCard = (id, monitor_id) => {
   return {
     type: ActionsTypes.MOVE_CARD,
     payload: {
-      id, monitorID,
+      id, monitor_id,
     }
   }
 };
