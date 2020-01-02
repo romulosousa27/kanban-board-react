@@ -122,6 +122,21 @@ export default function panels(state = [], action){
 
         });
 
+    case ActionsTypes.REMOVE_FROM_PANEL:
+      const panel_id_remove = action.payload.panel_id;
+      const card_id_remove = action.payload.card_id;
+
+      return state.map((panel) => {
+        const {cards} = panel;
+        if(panel_id_remove !== panel.id){
+          return panel
+        }
+        return Object.assign({}, panel, {
+          cards: cards.filter(id => card_id_remove)
+        })
+
+      });
+
     default:
       return state;
   }

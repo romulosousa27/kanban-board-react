@@ -26,7 +26,7 @@ class Home extends Component {
         <DndProvider backend={HTML5Backend}>
           <div className="col-xs-12 spacing">
             <button className="btn btn-primary" onClick={ this.handleCreatePanel }>
-              <i className="ion-plus-round"></i> New Panel
+              <i className="ion-plus-round"></i> Novo Painel
             </button>
           </div>
 
@@ -49,7 +49,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createPanel: () => dispatch(PanelActions.createPanel('New Panel Created')),
+    createPanel: () => dispatch(PanelActions.createPanel('Painel Criado')),
     editPanel: (id, value) => {
       const edited = {id};
 

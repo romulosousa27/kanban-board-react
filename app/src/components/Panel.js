@@ -45,7 +45,7 @@ class Panel extends Component {
 
   render(){
     const {cards, panel, connectDragPreview, connectDragSource, connectDropTarget} = this.props;
-    const filterCards = panel.cards.map(id => cards.find(card => card.id === id)).filter(card => card);
+    const filterCards = panel.cards.map(id => cards.find(card => card.id===id)).filter(card => card);
 
     return connectDragPreview(
         connectDropTarget(
@@ -59,7 +59,7 @@ class Panel extends Component {
                           text={ panel.text }
                           ToEdit={ this.props.editPanel }
                           editComponent={ this.props.editPanel }
-                          deleteComponent={ this.props.deletePanel }
+                          deleteComponent={ this.handleDeletePanel }
                       />
                     </div>
                     <div className="panel-body">
@@ -67,13 +67,13 @@ class Panel extends Component {
                           cards={ filterCards }
                           ToEdit={ this.props.editCard }
                           editCard={ this.props.editCard }
-                          deleteCard={ this.props.deleteCard }
+                          deleteCard={ this.handleDeleteCard }
                           moveCard={ this.props.moveCard }
                       />
                     </div>
                     <div className="panel-footer">
                       <button className="btn btn-primary btn-delete" onClick={ this.handleCreateCard }>
-                        <i className="ion-plus-round"></i> Card
+                        <i className="ion-plus-round"></i> Tarefa
                       </button>
                     </div>
                   </div>
@@ -94,9 +94,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     /** No momento de criar o Card, atribui ele ao Panel */
     createCard: (panel_id) => {
-      const createNewCard = CardActions.createCard('New Task Creted');
+      const createNewCard = CardActions.createCard('Nova Tarefa Criada');
       dispatch(createNewCard);
-      const { id } = createNewCard.payload;
+      const {id} = createNewCard.payload;
       dispatch(PanelActions.insertInPanel(panel_id, id))
     },
 
@@ -152,11 +152,11 @@ const panelHoverTarget = {
     const monitorType = monitor.getItemType();
     const monitor_id = monitorProps.id;
 
-    if(id!==monitor_id && Types.PANEL === monitorType) {
+    if(id!==monitor_id&&Types.PANEL===monitorType) {
       return props.movePanel(id, monitor_id)
     }
 
-    if(!cards.length && Types.CARD === monitorType){
+    if(!cards.length&&Types.CARD===monitorType) {
       return props.insertInPanel(id, monitor_id);
     }
   }
@@ -164,6 +164,6 @@ const panelHoverTarget = {
 
 export default connect(mapStateToProps, mapDispatchToProps)(
     DragSource(Types.PANEL, dragDropSrc, collect)(
-        DropTarget([Types.CARD,Types.PANEL], panelHoverTarget, collectTarget)(Panel)
+        DropTarget([Types.CARD, Types.PANEL], panelHoverTarget, collectTarget)(Panel)
     )
 )
